@@ -17,18 +17,15 @@ public class Checkpoint5_Problem2 {
 
         for (int item : setNumber) {
 
-            if (!setNumber.contains(item - 1)) {
+            int currentItem = item;
+            int tempSequenceLength = 1;
 
-                int currentItem = item;
-                int tempSequenceLength = 1;
-
-                while (setNumber.contains(currentItem + 1)) {
-                    currentItem++;
-                    tempSequenceLength++;
-                }
-
-                maxSequence = Math.max(maxSequence, tempSequenceLength);
+            while (setNumber.contains(currentItem + 1)) {
+                currentItem++;
+                tempSequenceLength++;
             }
+
+            maxSequence = Math.max(maxSequence, tempSequenceLength);
         }
 
         return maxSequence;
