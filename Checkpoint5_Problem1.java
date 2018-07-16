@@ -5,18 +5,6 @@ import java.util.List;
 
 public class Checkpoint5_Problem1 {
 
-    private boolean canSwap(List<Integer> list, int start, int end) {
-
-        if (start == end) return false;
-
-        for (int i = start; i < end; i++) {
-            if (list.get(i).equals(end)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     public List<List<Integer>> solve(List<Integer> list, int start) {
 
         List<List<Integer>> result = new ArrayList<>();
